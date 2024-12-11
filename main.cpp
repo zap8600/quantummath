@@ -20,10 +20,6 @@ class Matrix {
                 m[(j * rows) + j] = 1.0;
             }
         }
-
-        Matrix operator*(Matrix const& right) {
-            Matrix result(rows, columns);
-        }
 };
 
 int main() {
