@@ -24,6 +24,16 @@ void x0() {
     num3 = a0;
 }
 
+void x1() {
+    a0 = num0;
+    num1 = num3;
+    num3 = a0;
+
+    a0 = num0;
+    num0 = num2;
+    num2 = a0;
+}
+
 long z0, z1, z2, z3;
 
 int main() {
