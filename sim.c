@@ -58,23 +58,23 @@ int main() {
 
     printf("00: [ %ld ] ", z0);
     for(int i = 0; i < z0; i++) {
-        putc("#");
+        putc('#');
     }
-    putc("\n");
+    putc('\n');
     printf("01: [ %ld ] ", z1);
     for(int i = 0; i < z1; i++) {
-        putc("#");
+        putc('#');
     }
-    putc("\n");
+    putc('\n');
     printf("10: [ %ld ] ", z2);
     for(int i = 0; i < z2; i++) {
-        putc("#");
+        putc('#');
     }
-    putc("\n");
+    putc('\n');
     printf("11: [ %ld ] ", z3);
     for(int i = 0; i < z3; i++) {
-        putc("#");
+        putc('#');
     }
-    putc("\n");
+    putc('\n');
     return 0;
 }
