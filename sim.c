@@ -39,8 +39,8 @@ int main() {
     }
     double p0 = pow(creal(num0), 2.0) + pow(cimag(num0), 2);
     double p1 = (pow(creal(num1), 2.0) + pow(cimag(num1), 2)) + p0;
-    double p1 = (pow(creal(num2), 2.0) + pow(cimag(num2), 2)) + p1;
-    double p1 = (pow(creal(num3), 2.0) + pow(cimag(num3), 2)) + p2;
+    double p2 = (pow(creal(num2), 2.0) + pow(cimag(num2), 2)) + p1;
+    double p2 = (pow(creal(num3), 2.0) + pow(cimag(num3), 2)) + p2;
 
     for(int i = 0; i < shots; i++) {
         double r = fmod(((double)(rand()) / (double)(rand())), 1.0);
