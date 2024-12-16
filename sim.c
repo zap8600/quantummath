@@ -60,8 +60,8 @@ long z0, z1, z2, z3;
 
 int main() {
     srand(time(0));
-    printf("Running X1 and Z1 gate...\n");
-    x1g(); z1g();
+    printf("Running X1 and Z0 gate...\n");
+    x1g(); z0g();
     double sq = pow(creal(num0), 2.0) + pow(cimag(num0), 2) + pow(creal(num1), 2) + pow(cimag(num1), 2) + pow(creal(num2), 2) + pow(cimag(num2), 2) + pow(creal(num3), 2) + pow(cimag(num3), 2);
     if(fabs(sq - 1) > 0.00001) {
         double nf = sqrt(1 / sq);
