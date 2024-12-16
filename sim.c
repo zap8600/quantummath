@@ -14,7 +14,7 @@ double complex num2 = 0.0;
 double complex num3 = 0.0;
 double complex a0 = 0.0;
 
-void x0() {
+void x0g() {
     a0 = num0;
     num0 = num1;
     num1 = a0;
@@ -24,7 +24,7 @@ void x0() {
     num3 = a0;
 }
 
-void x1() {
+void x1g() {
     a0 = num1;
     num1 = num3;
     num3 = a0;
@@ -34,24 +34,24 @@ void x1() {
     num2 = a0;
 }
 
-void y0() {
+void y0g() {
     num0 = cimag(num0) + (-(creal(num0))) * I;
     num1 = cimag(num1) + (-(creal(num1))) * I;
     num2 = cimag(num2) + (-(creal(num2))) * I;
     num3 = cimag(num3) + (-(creal(num3))) * I;
 }
 
-void y1() {
+void y1g() {
     num1 = cimag(num1) + (-(creal(num1))) * I;
     num3 = cimag(num3) + (-(creal(num3))) * I;
 }
 
-void z0() {
+void z0g() {
     num2 = creal(num2) + (-(cimag(num2))) * I;
     num3 = creal(num3) + (-(cimag(num3))) * I;
 }
 
-void z1() {
+void z1g() {
     num1 = creal(num1) + (-(cimag(num1))) * I;
     num3 = creal(num3) + (-(cimag(num3))) * I;
 }
@@ -61,6 +61,7 @@ long z0, z1, z2, z3;
 int main() {
     srand(time(0));
     printf("Running X0 gate...\n");
+    x0g();
     double sq = pow(creal(num0), 2.0) + pow(cimag(num0), 2) + pow(creal(num1), 2) + pow(cimag(num1), 2) + pow(creal(num2), 2) + pow(cimag(num2), 2) + pow(creal(num3), 2) + pow(cimag(num3), 2);
     if(fabs(sq - 1) > 0.00001) {
         double nf = sqrt(1 / sq);
