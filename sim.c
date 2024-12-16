@@ -56,12 +56,18 @@ void z1g() {
     num3 = creal(num3) + (-(cimag(num3))) * I;
 }
 
+void cxg() {
+    a0 = num1;
+    num1 = num3;
+    num3 = a0;
+}
+
 long z0, z1, z2, z3;
 
 int main() {
     srand(time(0));
-    printf("Running X1 and Z0 gate...\n");
-    x1g(); z0g();
+    printf("Running gate(s)...\n");
+    x0g(); x1g(); cxg();
     double sq = pow(creal(num0), 2.0) + pow(cimag(num0), 2) + pow(creal(num1), 2) + pow(cimag(num1), 2) + pow(creal(num2), 2) + pow(cimag(num2), 2) + pow(creal(num3), 2) + pow(cimag(num3), 2);
     if(fabs(sq - 1) > 0.00001) {
         double nf = sqrt(1 / sq);
@@ -70,10 +76,10 @@ int main() {
         num2 *= nf;
         num3 *= nf;
     }
-    double p0 = pow(creal(num0), 2.0) + pow(cimag(num0), 2);
-    double p1 = (pow(creal(num1), 2.0) + pow(cimag(num1), 2)) + p0;
-    double p2 = (pow(creal(num2), 2.0) + pow(cimag(num2), 2)) + p1;
-    double p3 = (pow(creal(num3), 2.0) + pow(cimag(num3), 2)) + p2;
+    double p0 = pow(creal(num0), 2.0) + pow(cimag(num0), 2.0);
+    double p1 = (pow(creal(num1), 2.0) + pow(cimag(num1), 2.0)) + p0;
+    double p2 = (pow(creal(num2), 2.0) + pow(cimag(num2), 2.0)) + p1;
+    double p3 = (pow(creal(num3), 2.0) + pow(cimag(num3), 2.0)) + p2;
 
     for(int i = 0; i < shots; i++) {
         double r = fmod(((double)(rand()) / (double)(rand())), 1.0);
