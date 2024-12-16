@@ -100,13 +100,13 @@ int main() {
         putc('#', stdout);
     }
     putc('\n', stdout);
-    printf("01: [ %ld ] ", z1);
-    for(int i = 0; i < z1; i++) {
+    printf("01: [ %ld ] ", z2);
+    for(int i = 0; i < z2; i++) {
         putc('#', stdout);
     }
     putc('\n', stdout);
-    printf("10: [ %ld ] ", z2);
-    for(int i = 0; i < z2; i++) {
+    printf("10: [ %ld ] ", z1);
+    for(int i = 0; i < z1; i++) {
         putc('#', stdout);
     }
     putc('\n', stdout);
